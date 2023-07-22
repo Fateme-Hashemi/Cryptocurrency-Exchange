@@ -2,6 +2,9 @@ import React from 'react';
 import { getapi } from '../services/api';
 import { useEffect, useState } from 'react';
 import Loading from "./Loading";
+import Coin from './Coin';
+
+
 
 const Landing = () => {
 
@@ -32,7 +35,16 @@ const Landing = () => {
                 coins.length ?
                 <div>
                 {
-                    coins.map(coin => <p key={coin.id}>{coin.name}</p>)
+                    coins.map(coin => <Coin 
+                    key={coin.id}
+                    name={coin.name}
+                    symbol={coin.symbol}
+                    price={coin.current_price}
+                    priceChange={coin.price_change_24h}
+                    marketcap={coin.market_cap}
+                    image={coin.image}
+                    
+                    />)
                 }
     
             </div> :
