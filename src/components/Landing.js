@@ -6,10 +6,14 @@ import { useEffect, useState } from 'react';
 
 const Landing = () => {
 
+    const [coins, setCoins] = useState([]);
+
+
+
  useEffect(()=> {
     const fetchapi =async ()=> {
         const data = await getapi();
-        console.log(data);
+        setCoins(data);
     }
 
     fetchapi();
@@ -18,10 +22,21 @@ const Landing = () => {
 
 
     return (
+   <>
+        <input type='text' placeholder='Search ...' />
+
         <div>
-          
-            Landing ...
+            {
+                coins.map(coin => <p key={coin.id}>{coin.name}</p>)
+            }
+
         </div>
+
+
+
+
+
+   </>
     );
 };
 
