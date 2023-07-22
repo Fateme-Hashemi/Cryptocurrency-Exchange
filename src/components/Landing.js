@@ -1,8 +1,7 @@
 import React from 'react';
 import { getapi } from '../services/api';
 import { useEffect, useState } from 'react';
-
-
+import Loading from "./Loading";
 
 const Landing = () => {
 
@@ -23,14 +22,29 @@ const Landing = () => {
 
     return (
    <>
+
+        
         <input type='text' placeholder='Search ...' />
 
-        <div>
+      
+
             {
-                coins.map(coin => <p key={coin.id}>{coin.name}</p>)
+                coins.length ?
+                <div>
+                {
+                    coins.map(coin => <p key={coin.id}>{coin.name}</p>)
+                }
+    
+            </div> :
+
+                <Loading />
+
+
             }
 
-        </div>
+
+
+       
 
 
 
