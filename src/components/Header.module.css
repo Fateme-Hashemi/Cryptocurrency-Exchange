@@ -1,0 +1,13 @@
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-left: 120px;
+    
+
+}
+ul li {
+    list-style-type: none;
+    font-weight: bold;
+    color: #5e5151;
+}

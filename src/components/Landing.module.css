@@ -1,0 +1,28 @@
+.input {
+    width: 300px;
+    margin-top: 50px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    height: 20px;
+    padding: 5px;
+    background-color: #f6f6f6;
+    transition: all .2s ease;
+margin-left: 210px;
+
+}
+
+.input:focus {
+    outline: none;
+    border-color: white;
+    background: white;
+    box-shadow: rgba(24,24,74,0.24) 0px 3px 8px;
+}
+
+.coinContainer {
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid silver;
+    background-color: #f6f6f6;
+}
+
